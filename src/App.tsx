@@ -38,7 +38,7 @@ const App: React.FC = () => {
             element={<UserList users={users} onEdit={user => window.location.assign(`/edit/${user.id}`)} />}
           />
           <Route path="/add" element={<AddUserPage users={users} onAddUser={addUser} />} />
-          <Route path="/edit/:id" element={<EditUserPage onUpdateUser={updateUser} />} />
+          <Route path="/edit/:id" element={<EditUserPage users={users} onUpdateUser={updateUser} />} />
         </Routes>
       </div>
     </Router>
